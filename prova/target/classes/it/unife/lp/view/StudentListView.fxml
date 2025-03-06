@@ -1,0 +1,6 @@
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="it.unife.lp.controller.StudentListController" spacing="10" alignment="center">
+    <ListView fx:id="studentListView" prefWidth="600" prefHeight="400"/>
+</VBox>

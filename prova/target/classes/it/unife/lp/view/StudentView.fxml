@@ -1,0 +1,48 @@
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Pos?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="it.unife.lp.controller.StudentController" spacing="10" alignment="center">
+    <Label text="Gestione Studenti" style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+    
+    <GridPane alignment="center" hgap="10" vgap="10">
+        <Label text="ID:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="idField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+        
+        <Label text="Nome:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextField fx:id="nomeField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+        
+        <Label text="Cognome:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <TextField fx:id="cognomeField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+        
+        <Label text="Data di Nascita:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <TextField fx:id="dataNascitaField" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+        
+        <Label text="Classe:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+        <TextField fx:id="classeField" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+    </GridPane>
+    
+    <HBox spacing="10" alignment="center">
+        <Button text="Add Student" onAction="#handleAddStudent"/>
+        <Button text="Update Student" onAction="#handleUpdateStudent"/>
+        <Button text="Delete Student" onAction="#handleDeleteStudent"/>
+    </HBox>
+    
+    <HBox spacing="10" alignment="center">
+        <Button text="Go to Teachers" onAction="#goToTeacherView"/>
+        <Button text="Go to Courses" onAction="#goToCourseView"/>
+    </HBox>
+    
+    <GridPane alignment="center" hgap="10" vgap="10">
+        <Label text="Search by ID or Name:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="searchField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+        <Button text="Search" onAction="#handleSearchStudent" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+    </GridPane>
+    
+    <Button text="Show All Students" onAction="#showAllStudents"/>
+</VBox>

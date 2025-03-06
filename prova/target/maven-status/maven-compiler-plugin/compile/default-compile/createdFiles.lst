@@ -1,0 +1,11 @@
+it\unife\lp\controller\TeacherListController.class
+it\unife\lp\App.class
+it\unife\lp\controller\TeacherController.class
+it\unife\lp\model\Student.class
+it\unife\lp\controller\StudentController.class
+it\unife\lp\model\Course.class
+module-info.class
+it\unife\lp\model\Teacher.class
+it\unife\lp\controller\CourseController.class
+it\unife\lp\controller\CourseListController.class
+it\unife\lp\controller\StudentListController.class

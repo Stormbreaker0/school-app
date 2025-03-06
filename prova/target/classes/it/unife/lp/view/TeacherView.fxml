@@ -1,0 +1,45 @@
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Pos?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="it.unife.lp.controller.TeacherController" spacing="10" alignment="center">
+    <Label text="Gestione Insegnanti" style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+    
+    <GridPane alignment="center" hgap="10" vgap="10">
+        <Label text="ID:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="idField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+        
+        <Label text="Nome:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextField fx:id="nomeField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+        
+        <Label text="Cognome:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <TextField fx:id="cognomeField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+        
+        <Label text="Materia:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <TextField fx:id="materiaField" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+    </GridPane>
+    
+    <HBox spacing="10" alignment="center">
+        <Button text="Add Teacher" onAction="#handleAddTeacher"/>
+        <Button text="Update Teacher" onAction="#handleUpdateTeacher"/>
+        <Button text="Delete Teacher" onAction="#handleDeleteTeacher"/>
+    </HBox>
+    
+    <HBox spacing="10" alignment="center">
+        <Button text="Go to Students" onAction="#goToStudentView"/>
+        <Button text="Go to Courses" onAction="#goToCourseView"/>
+    </HBox>
+    
+    <GridPane alignment="center" hgap="10" vgap="10">
+        <Label text="Search by ID or Name:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="searchField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+        <Button text="Search" onAction="#handleSearchTeacher" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+    </GridPane>
+    
+    <Button text="Show All Teachers" onAction="#showAllTeachers"/>
+</VBox>

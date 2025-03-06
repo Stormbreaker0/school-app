@@ -1,0 +1,58 @@
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Pos?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="it.unife.lp.controller.CourseController" spacing="10" alignment="center">
+    <Label text="Gestione Corsi" style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+    
+    <GridPane alignment="center" hgap="10" vgap="10">
+        <Label text="ID:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="idField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+        
+        <Label text="Nome:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextField fx:id="nomeField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+        
+        <Label text="Descrizione:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <TextField fx:id="descrizioneField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+    </GridPane>
+    
+    <HBox spacing="10" alignment="center">
+        <Button text="Add Course" onAction="#handleAddCourse"/>
+        <Button text="Update Course" onAction="#handleUpdateCourse"/>
+        <Button text="Delete Course" onAction="#handleDeleteCourse"/>
+    </HBox>
+    
+    <HBox spacing="10" alignment="center">
+        <Button text="Go to Students" onAction="#goToStudentView"/>
+        <Button text="Go to Teachers" onAction="#goToTeacherView"/>
+    </HBox>
+    
+    <GridPane alignment="center" hgap="10" vgap="10">
+        <Label text="Search by ID or Name:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="searchField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+        <Button text="Search" onAction="#handleSearchCourse" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+    </GridPane>
+    
+    <GridPane alignment="center" hgap="10" vgap="10">
+        <Label text="Student ID:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="studentIdField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+        <HBox spacing="10" alignment="center" GridPane.rowIndex="1" GridPane.columnIndex="0" GridPane.columnSpan="2">
+            <Button text="Add Student to Course" onAction="#handleAddStudentToCourse"/>
+            <Button text="Remove Student from Course" onAction="#handleRemoveStudentFromCourse"/>
+        </HBox>
+        
+        <Label text="Teacher ID:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <TextField fx:id="teacherIdField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+        <HBox spacing="10" alignment="center" GridPane.rowIndex="3" GridPane.columnIndex="0" GridPane.columnSpan="2">
+            <Button text="Assign Teacher to Course" onAction="#handleAssignTeacherToCourse"/>
+            <Button text="Remove Teacher from Course" onAction="#handleRemoveTeacherFromCourse"/>
+        </HBox>
+    </GridPane>
+    
+    <Button text="Show All Courses" onAction="#showAllCourses"/>
+</VBox>
