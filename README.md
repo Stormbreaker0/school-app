@@ -1,2 +1,2 @@
-# school-app
-School management with JavaFx
+# school-management
+Small JavaFx Application for school management
